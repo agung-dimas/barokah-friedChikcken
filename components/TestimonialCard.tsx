@@ -10,6 +10,7 @@ interface TestimonialCardProps {
     comment: string;
     rating: number;
     imageURL?: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     createdAt?: any;
   };
 }
@@ -17,6 +18,7 @@ interface TestimonialCardProps {
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
   const { name, userPhotoURL, comment, rating, imageURL, createdAt } = testimonial;
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const formatDate = (dateInput: any) => {
     if (!dateInput) return '';
     let date: Date;
@@ -67,7 +69,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
 
         {/* Comment Text */}
         <p className="font-body text-on-surface-variant text-sm md:text-base mb-4 italic leading-relaxed line-clamp-4">
-          "{comment}"
+          &quot;{comment}&quot;
         </p>
       </div>
 

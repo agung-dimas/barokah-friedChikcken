@@ -2,12 +2,10 @@
 
 import React, { useState, useRef } from 'react';
 import { useAuth } from '@/context/AuthContext';
-import { db, storage } from '@/lib/firebase';
+import { db } from '@/lib/firebase';
 import { collection, addDoc } from 'firebase/firestore';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { getAvatarUrl } from '@/lib/avatar';
 import Button from './Button';
-import Image from 'next/image';
 
 const TestimonialForm = () => {
   const { user, login } = useAuth();
@@ -124,6 +122,7 @@ const TestimonialForm = () => {
         try {
           // Kompresi gambar langsung di browser menjadi Base64 (100% GRATIS & INSTAN)
           uploadedImageURL = await compressImageToBase64(file);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (compressError: any) {
           console.error("Compression failed, using preview fallback", compressError);
           uploadedImageURL = imagePreview || '';
@@ -152,6 +151,7 @@ const TestimonialForm = () => {
       setComment('');
       setFile(null);
       setImagePreview(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error("Error submitting testimonial", error);
       alert(error.message || 'Gagal mengirimkan testimoni. Silakan coba lagi.');
@@ -181,7 +181,7 @@ const TestimonialForm = () => {
           </div>
           
           <div className="space-y-4 mb-8 text-on-surface-variant text-sm md:text-base leading-relaxed">
-            <p className="font-bold text-primary italic">"Wahai orang-orang yang beriman, bertakwalah kepada Allah dan bersamalah kamu dengan orang-orang yang benar." (QS. At-Taubah: 119)</p>
+            <p className="font-bold text-primary italic">&quot;Wahai orang-orang yang beriman, bertakwalah kepada Allah dan bersamalah kamu dengan orang-orang yang benar.&quot; (QS. At-Taubah: 119)</p>
             
             <div className="flex gap-3">
               <span className="material-symbols-outlined text-green-600 shrink-0">check_circle</span>
@@ -232,7 +232,7 @@ const TestimonialForm = () => {
         <p className="text-on-surface-variant leading-relaxed mb-6">
           Testimoni Anda telah berhasil terkirim dan langsung muncul di carousel testimoni utama kami. Semoga ulasan Anda membawa berkah bagi sesama.
         </p>
-        <p className="text-primary font-bold italic mb-6">"InshaAllah Berkat, Terima kasih!"</p>
+        <p className="text-primary font-bold italic mb-6">&quot;InshaAllah Berkat, Terima kasih!&quot;</p>
         <Button className="bg-primary hover:bg-primary-container text-white px-8 py-3" onClick={() => setSubmitted(false)}>Kirim Ulasan Lain</Button>
       </div>
     );

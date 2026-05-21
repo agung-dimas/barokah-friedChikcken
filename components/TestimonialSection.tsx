@@ -17,6 +17,7 @@ interface Testimonial {
   rating: number;
   comment: string;
   imageURL?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   createdAt: any;
 }
 

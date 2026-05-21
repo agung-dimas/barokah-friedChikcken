@@ -103,7 +103,7 @@ const AdminModeration = () => {
             </div>
             
             <div className="flex-grow flex flex-col gap-2 min-w-0">
-              <p className="text-sm italic text-on-surface-variant break-words">"{t.comment}"</p>
+              <p className="text-sm italic text-on-surface-variant break-words">&quot;{t.comment}&quot;</p>
               {t.imageURL && (
                 <div className="relative w-20 h-12 rounded-lg overflow-hidden border border-amber-100 bg-amber-50">
                   <a href={t.imageURL} target="_blank" rel="noopener noreferrer" title="Klik untuk lihat ukuran penuh">
