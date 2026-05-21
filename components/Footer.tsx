@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -7,15 +8,25 @@ const Footer = () => {
       <div className="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
           <div className="md:w-1/3">
-            <div className="text-3xl font-display font-bold text-primary-container mb-6">
-              Barokah Fried Chicken
+            <div className="flex items-center gap-3 mb-6">
+              <div className="relative w-12 h-12 overflow-hidden rounded-full bg-white p-0.5 border border-primary-container/20 flex-shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="Logo Barokah Fried Chicken"
+                  fill
+                  className="object-contain rounded-full"
+                />
+              </div>
+              <span className="text-3xl font-display font-bold text-primary-container">
+                Barokah Fried Chicken
+              </span>
             </div>
             <p className="font-body text-on-surface-variant mb-6 leading-relaxed">
               Sajian ayam goreng krispy terbaik dengan standar halal dan thayyib. Menghadirkan keberkahan di setiap hidangan keluarga.
             </p>
             <p className="font-body text-on-surface-variant mb-6">
-              Jl. Sudirman No. 123, Jakarta Pusat<br/>
-              DKI Jakarta, 10220
+              Jl. Mayor Zen, Kec. Kalidoni<br />
+              Palembang, Sumatera Selatan
             </p>
             <div className="flex items-center gap-2 text-on-surface-variant">
               <span className="material-symbols-outlined text-primary-container">schedule</span>
@@ -31,7 +42,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col gap-4 font-body font-bold text-on-surface-variant">
               <h4 className="text-on-surface mb-2">Bantuan</h4>
-              <Link href="#" className="hover:text-primary-container transition-colors">Hubungi Kami</Link>
+              <Link href="https://wa.me/6285609098845" target="_blank" rel="noopener noreferrer" className="hover:text-primary-container transition-colors">Hubungi Kami</Link>
               <Link href="#location" className="hover:text-primary-container transition-colors">Lokasi Outlet</Link>
               <Link href="#" className="hover:text-primary-container transition-colors">FAQ</Link>
             </div>
@@ -39,7 +50,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-surface-variant/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-body text-on-surface-variant text-sm">
-            © 2024 Barokah Fried Chicken. InshaAllah Berkat.
+            © 2026 Barokah Fried Chicken. InshaAllah Berkat.
           </p>
           <div className="flex gap-6">
             <Link href="#" className="text-on-surface-variant hover:text-primary-container transition-colors">

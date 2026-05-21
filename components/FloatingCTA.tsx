@@ -3,7 +3,7 @@ import React from 'react';
 const FloatingCTA = () => {
   return (
     <a 
-      href="https://wa.me/628123456789" 
+      href="https://wa.me/6285609098845" 
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center group"

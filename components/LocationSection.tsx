@@ -32,24 +32,28 @@ const LocationSection = () => {
             </div>
             <div className="flex items-start gap-3 text-on-surface-variant">
               <span className="material-symbols-outlined mt-1 text-primary-container">location_on</span>
-              <p className="font-body">Jl. Sudirman No. 123, Jakarta Pusat, DKI Jakarta, 10220</p>
+              <p className="font-body font-bold">Jl. Mayor Zen, Kec. Kalidoni, Palembang, Sumatera Selatan</p>
             </div>
           </div>
-          <div className="h-[400px] bg-surface-container rounded-xl overflow-hidden shadow-sm relative">
-            {/* Placeholder for Map */}
+          <a 
+            href="https://maps.app.goo.gl/nzfT4p7YxfX58SuX6" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="h-[400px] bg-surface-container rounded-xl overflow-hidden shadow-sm relative block group cursor-pointer"
+          >
             <Image 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_9-Z_X_Y_Z_X_Y_Z_X_Y_Z_X_Y_Z_X_Y_Z_X_Y_Z_X_Y_Z_X_Y_Z_X_Y_Z_X_Y_Z"
-              alt="Map Location"
+              src="/map_preview.png"
+              alt="Peta Lokasi Barokah Fried Chicken Kalidoni Palembang"
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-black/5 flex items-center justify-center">
-              <div className="bg-white/90 p-4 rounded-lg shadow-lg font-bold text-primary-container flex items-center gap-2">
-                <span className="material-symbols-outlined">map</span>
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+              <div className="bg-white/95 px-5 py-3 rounded-xl shadow-lg font-bold text-primary-container flex items-center gap-2 transform transition-transform group-hover:scale-105">
+                <span className="material-symbols-outlined animate-bounce">location_on</span>
                 Buka di Google Maps
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

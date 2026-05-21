@@ -60,14 +60,14 @@ export default function Home() {
       price: 'Rp 19.000',
     },
     {
-      image: 'https://images.unsplash.com/photo-1544787210-28272550dc8a?q=80&w=800&auto=format&fit=crop',
+      image: '/esteh.png',
       title: 'Es Teh Manis',
       description: 'Gula asli, segar',
       price: 'Rp 5.000',
       priceColor: 'text-on-surface',
     },
     {
-      image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?q=80&w=800&auto=format&fit=crop',
+      image: '/esjeruk.png',
       title: 'Es Jeruk',
       description: 'Jeruk peras asli',
       price: 'Rp 8.000',
