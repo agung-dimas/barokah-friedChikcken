@@ -82,7 +82,7 @@ export default function Home() {
     },
     {
       question: 'Apakah ada minimal order untuk delivery?',
-      answer: 'Untuk layanan delivery langsung dari kami, minimal order adalah Rp 50.000. Anda juga bisa memesan melalui aplikasi ojek online tanpa minimal order.',
+      answer: 'Untuk layanan delivery langsung dari kami, minimal order adalah Rp 50.000. Di area Palembang. Anda juga bisa memesan melalui aplikasi ojek online tanpa minimal order.',
     },
     {
       question: 'Jam berapa saja outlet buka?',
@@ -93,11 +93,11 @@ export default function Home() {
   return (
     <div className="antialiased font-body" suppressHydrationWarning>
       <Navbar />
-      
+
       <main className="pt-20">
         <Hero />
         <TrustSignals />
-        
+
         {/* Features Section */}
         <section id="about" className="py-section-gap bg-surface-bright">
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -146,20 +146,20 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 relative">
               <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-surface-variant/30 -z-0"></div>
-              <ProcessStep 
-                number={1} 
-                title="Pemilihan Bahan" 
-                description="Bahan baku pilihan, dijamin halal dan thayyib dari suplier terpercaya." 
+              <ProcessStep
+                number={1}
+                title="Pemilihan Bahan"
+                description="Bahan baku pilihan, dijamin halal dan thayyib dari suplier terpercaya."
               />
-              <ProcessStep 
-                number={2} 
-                title="Marinating" 
-                description="Proses marinasi dengan bumbu rempah pilihan agar meresap sempurna." 
+              <ProcessStep
+                number={2}
+                title="Marinating"
+                description="Proses marinasi dengan bumbu rempah pilihan agar meresap sempurna."
               />
-              <ProcessStep 
-                number={3} 
-                title="Penggorengan" 
-                description="Digoreng dengan suhu yang tepat untuk hasil renyah dan juicy." 
+              <ProcessStep
+                number={3}
+                title="Penggorengan"
+                description="Digoreng dengan suhu yang tepat untuk hasil renyah dan juicy."
               />
             </div>
           </div>
